@@ -33,7 +33,7 @@ module "consul" {
   cluster_tag_key         = "consul-servers"
   cluster_tag_value       = "${local.stack_name}-${local.env_name}-consul-srv"
   allowed_ssh_cidr_blocks = ["0.0.0.0/0"]
-  ssh_key_name            = "kp-us-east-1-playground-instancekey"
+  ssh_key_name            = "cos-playground"
   instance_type           = "t2.micro"
   num_servers             = "3"
 }

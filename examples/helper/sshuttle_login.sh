@@ -53,7 +53,7 @@ function print_usage {
   echo -e "\t-c,--cidr-vpc:\t\tCIDR of the vpc."
   echo -e "\t-k,--key:\t\tThe key-file to log into the bastion-instance."
   echo -e "\n"
-  echo -e "\texample: $SCRIPT_NAME --bastion-ip 18.208.27.78 --cidr-vpc 10.128.0.0/16 --key ~/.ssh/kp-us-east-1-playground-instancekey.pem"
+  echo -e "\texample: $SCRIPT_NAME --bastion-ip 18.208.27.78 --cidr-vpc 10.128.0.0/16 --key ~/.ssh/cos-playground.pem"
 }
 
 function run {

@@ -45,7 +45,7 @@ module "nomad-datacenter" {
   env_name                = "${local.env_name}"
   stack_name              = "${local.stack_name}"
   allowed_ssh_cidr_blocks = ["0.0.0.0/0"]
-  ssh_key_name            = "kp-us-east-1-playground-instancekey"
+  ssh_key_name            = "cos-playground"
   datacenter_name         = "public-services"
   instance_type           = "t2.micro"
   unique_postfix          = "-${random_pet.unicorn.id}"

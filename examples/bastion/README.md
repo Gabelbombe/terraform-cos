@@ -22,7 +22,7 @@ Just call the output of the example called ```ssh_login```.
 
 ```bash
 # example
-ssh ec2-user@35.170.62.37 -i ~/.ssh/kp-us-east-1-playground-instancekey.pem
+ssh ec2-user@35.170.62.37 -i ~/.ssh/cos-playground.pem
 ```
 
 
