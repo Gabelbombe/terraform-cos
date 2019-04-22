@@ -25,7 +25,7 @@ variable "aws_region" {
 
 variable "ssh_key_name" {
   description = "AWS instance key to use for SSH login"
-  default     = "kp-us-east-1-playground-instancekey"
+  default     = "cos-playground"
 }
 
 variable "stack_name" {
