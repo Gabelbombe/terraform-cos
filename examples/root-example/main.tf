@@ -1,5 +1,5 @@
 locals {
-  ami_id_bastion = "ami-1853ac65" # Amazon Linux AMI 2017.09.1 (HVM)
+  ami_id_bastion = "ami-0cfbf4f6db41068ac" # Amazon Linux AMI 2018.03.0 (HVM)
 
   # cidr blocks allowed for ssh and alb access
   allowed_cidr_blocks = {
@@ -82,11 +82,11 @@ module "nomad-infra" {
 
   allowed_cidr_blocks_for_ui_alb = "${local.allowed_cidr_blocks}"
 
-  # INFO: uncomment the following two lines if you want to deploy the cluster having https endpoints 
+  # INFO: uncomment the following two lines if you want to deploy the cluster having https endpoints
   # for the ui-albs (nomad-ui, consul-ui and fabio-ui).
   # Keep in mind that you have to configure the nomad CLI to skip certificate verification in this case
   # because the sample certificate that is used here is just a self signed one which even does not fit the
-  # domain by the nomad alb. Short said it is invalid and only in place for testing/ demonstration purposes. 
+  # domain by the nomad alb. Short said it is invalid and only in place for testing/ demonstration purposes.
   #ui_alb_https_listener_cert_arn = "${aws_iam_server_certificate.certificate_alb.arn}"
   #ui_alb_use_https_listener      = true
 

@@ -5,12 +5,12 @@ variable "deploy_profile" {
 
 variable "nomad_ami_id_servers" {
   description = "AMI ID for nomad server"
-  default     = "ami-02d24827dece83bef"
+  default     = "ami-0df4c663b6052da76"
 }
 
 variable "nomad_ami_id_clients" {
   description = "AMI ID for nomad nodes"
-  default     = "ami-02d24827dece83bef"
+  default     = "ami-0df4c663b6052da76"
 }
 
 variable "env_name" {
@@ -20,7 +20,7 @@ variable "env_name" {
 
 variable "aws_region" {
   description = "AWS Region to deploy the cluster to."
-  default     = "us-east-1"
+  default     = "eu-central-1"
 }
 
 variable "ssh_key_name" {
