@@ -1,5 +1,5 @@
 locals {
-  ami_id_bastion = "ami-0cfbf4f6db41068ac" # Amazon Linux AMI 2018.03.0 (HVM)
+  ami_id_bastion = "ami-08935252a36e25f85" # Amazon Linux AMI 2018.03.0 (HVM)
 
   # cidr blocks allowed for ssh and alb access
   allowed_cidr_blocks = {

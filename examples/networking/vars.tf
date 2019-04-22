@@ -3,6 +3,6 @@ variable "deploy_profile" {
 }
 
 variable "aws_region" {
-  description = "The AWS region to deploy into (e.g. us-east-1)."
-  default     = "us-east-1"
+  description = "The AWS region to deploy into (e.g. eu-west-1)."
+  default     = "eu-west-1"
 }

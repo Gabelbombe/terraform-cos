@@ -6,7 +6,7 @@ import argparse
 
 # Use the following commands to get list on nodes you want to drain
 #  curl -k  'https://nomad.address/v1/nodes?pretty' | jq '.[] | {dc: .Datacenter, id: .ID, instance: .Name, status: .Status} |  select(.dc=="private-services") | select(.status=="ready") | .id '
-# aws ec2 describe-tags --profile=default --region=eu-central-1 | jq '.Tags | .[] | select(.Key=="teg_key") | select(.Value=="tag_value")'
+# aws ec2 describe-tags --profile=default --region=eu-west-1 | jq '.Tags | .[] | select(.Key=="teg_key") | select(.Value=="tag_value")'
 
 
 def select_ec2_instances_by_tag(key, value, profile, region):

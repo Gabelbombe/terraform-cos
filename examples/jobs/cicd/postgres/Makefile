@@ -1,6 +1,6 @@
 category 		:= service
 name     		:= postgres
-aws_reg  		:= us-east-1
+aws_reg  		:= eu-west-1
 aws_profile := playground
 
 ################################################################################################################

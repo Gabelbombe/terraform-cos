@@ -20,7 +20,7 @@ data "aws_subnet_ids" "all" {
 
 module "consul" {
   source     = "../../modules/consul"
-  aws_region = "eu-central-1"
+  aws_region = "eu-west-1"
   vpc_id     = "${data.aws_vpc.default.id}"
   subnet_ids = "${data.aws_subnet_ids.all.ids}"
   ami_id     = "ami-a23feadf"

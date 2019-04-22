@@ -35,7 +35,7 @@ As described at [Authentication Packer](https://www.packer.io/docs/builders/amaz
 # environment variables
 export AWS_ACCESS_KEY_ID=<your access key id>
 export AWS_SECRET_ACCESS_KEY=<your secret key>
-export AWS_DEFAULT_REGION=us-east-1
+export AWS_DEFAULT_REGION=eu-west-1
 ```
 
 ### Build the AMI using Packer
@@ -50,9 +50,9 @@ The following can be applied for `nomad-consul-docker-ecr.json` and `nomad-consu
 # aws_account_ids - A list of AWS account Id's (comma separated list) this ami should be allowed to used from.
 packer build nomad-consul-docker-ecr.json
 
-# Build the AMI in us-east-1 and make it available in us-east-2 as well.
-packer build -var 'aws_region=us-east-1' -var 'ami_regions=us-east-1,us-east-2' nomad-consul-docker-ecr.json
+# Build the AMI in eu-west-1 and make it available in eu-west-2 as well.
+packer build -var 'aws_region=eu-west-1' -var 'ami_regions=eu-west-1,eu-west-2' nomad-consul-docker-ecr.json
 
-# Build the AMI in us-east-1, make it available in us-east-2 as well and grant access from account 123456789 and 987654321.
-packer build -var 'aws_region=us-east-1' -var 'ami_regions=us-east-1,us-east-2' -var aws_account_ids='123456789,987654321' nomad-consul-docker-ecr.json
+# Build the AMI in eu-west-1, make it available in eu-west-2 as well and grant access from account 123456789 and 987654321.
+packer build -var 'aws_region=eu-west-1' -var 'ami_regions=eu-west-1,eu-west-2' -var aws_account_ids='123456789,987654321' nomad-consul-docker-ecr.json
 ```

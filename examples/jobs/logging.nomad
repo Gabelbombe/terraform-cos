@@ -16,7 +16,7 @@ job "logging" {
     task "elasticsearch" {
       driver = "docker"
       config {
-        image = "<aws_account_id>.dkr.ecr.eu-central-1.amazonaws.com/service/elasticsearch:2018-05-11_15-31-52d3d2634_dirty"
+        image = "<aws_account_id>.dkr.ecr.eu-west-1.amazonaws.com/service/elasticsearch:2018-05-11_15-31-52d3d2634_dirty"
 
         port_map = {
           http = 9200
@@ -84,7 +84,7 @@ EOH
     task "kibana" {
       driver = "docker"
       config {
-        image = "<aws_account_id>.dkr.ecr.eu-central-1.amazonaws.com/service/kibana:2018-05-11_15-32-18d3d2634_dirty"
+        image = "<aws_account_id>.dkr.ecr.eu-west-1.amazonaws.com/service/kibana:2018-05-11_15-32-18d3d2634_dirty"
         port_map = {
           http = 5601
         }

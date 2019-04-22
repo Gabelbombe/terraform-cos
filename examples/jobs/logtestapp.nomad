@@ -17,7 +17,7 @@ job "logtestapp" {
     task "logtestapp" {
       driver = "docker"
       config {
-        image = "<aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/service/logtestapp:2018-04-30_16-34-589c92843_dirty"
+        image = "<aws_account_id>.dkr.ecr.eu-west-1.amazonaws.com/service/logtestapp:2018-04-30_16-34-589c92843_dirty"
 
         ulimit {
           nofile = "65536:65536"

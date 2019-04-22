@@ -19,8 +19,8 @@ variable "env_name" {
 }
 
 variable "aws_region" {
-  description = "The AWS region to deploy into (e.g. us-east-1)."
-  default     = "eu-central-1"
+  description = "The AWS region to deploy into (e.g. eu-west-1)."
+  default     = "eu-west-1"
 }
 
 variable "stack_name" {

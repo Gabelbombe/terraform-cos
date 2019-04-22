@@ -41,7 +41,7 @@ function usage {
   echo -e "optional parameters:"
   echo -e "\tefs_mount_target ... The DNS name of the EFS mount, default: ${EFS_DNS_NAME}"
   echo -e "example:"
-  echo -e "\t$SCRIPT_NAME fs-f604d78f.efs.us-east-2.amazonaws.com"
+  echo -e "\t$SCRIPT_NAME fs-f604d78f.efs.eu-west-2.amazonaws.com"
 }
 
 function mount_efs {

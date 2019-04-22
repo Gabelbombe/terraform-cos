@@ -216,7 +216,7 @@ function print_usage {
   echo -e "\t-f,--file:\t\tInputfile."
   echo -e "\t-r,--region:\t\tThe region."
   echo -e "\n"
-  echo -e "\texample: $SCRIPT_NAME --file ip-ranges.json --region eu-central-1"
+  echo -e "\texample: $SCRIPT_NAME --file ip-ranges.json --region eu-west-1"
 }
 
 assert_is_installed "jq"

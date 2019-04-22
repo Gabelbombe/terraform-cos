@@ -9,7 +9,7 @@ registry_local_url := "<host_ip_address>:5000"
 latest_tag         := false
 
 # Registry: AWS - default configuration, if unset environment variables
-AWS_REGION    ?= eu-central-1
+AWS_REGION    ?= eu-west-1
 AWS_PROFILE		?= integration
 
 ################################################################################################################

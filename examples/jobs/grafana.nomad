@@ -17,7 +17,7 @@ job "grafana" {
       driver = "docker"
 
       config {
-        image = "<aws_account_id>.dkr.ecr.eu-central-1.amazonaws.com/service/grafana:2018-06-29_11-15-06_7ef8eb5_dirty"
+        image = "<aws_account_id>.dkr.ecr.eu-west-1.amazonaws.com/service/grafana:2018-06-29_11-15-06_7ef8eb5_dirty"
 
         port_map {
           http = 3000
@@ -62,7 +62,7 @@ job "grafana" {
 
       # Configure Docker driver with the image
       config {
-        image = "<aws_account_id>.dkr.ecr.eu-central-1.amazonaws.com/service/grafanahaproxy:2018-06-29_10-05-39_ea68d7c_dirty"
+        image = "<aws_account_id>.dkr.ecr.eu-west-1.amazonaws.com/service/grafanahaproxy:2018-06-29_10-05-39_ea68d7c_dirty"
 
         port_map {
           http = 80

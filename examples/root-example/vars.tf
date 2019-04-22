@@ -20,7 +20,7 @@ variable "env_name" {
 
 variable "aws_region" {
   description = "AWS Region to deploy the cluster to."
-  default     = "eu-central-1"
+  default     = "eu-west-1"
 }
 
 variable "ssh_key_name" {

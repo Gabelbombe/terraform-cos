@@ -19,7 +19,7 @@ job "fluentd_sys" {
       }
 
       config {
-        image = "<aws_account_id>.dkr.ecr.eu-central-1.amazonaws.com/service/fluentd:2018-05-11_14-58-55d3d2634_dirty"
+        image = "<aws_account_id>.dkr.ecr.eu-west-1.amazonaws.com/service/fluentd:2018-05-11_14-58-55d3d2634_dirty"
 
         port_map = {
           logstream = "${LOGGING_FLUENTD_PORT}"

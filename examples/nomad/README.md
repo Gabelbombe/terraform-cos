@@ -1,7 +1,7 @@
 # Overview
 
 Basic example for the nomad module.
-Per default the module will be deployed in us-east-1 (virginia) into three AZ's. Additionally to ensure that the nomad servers find each other the consul-server module is also deployed with this example.
+Per default the module will be deployed in eu-west-1 (ireland) into three AZ's. Additionally to ensure that the nomad servers find each other the consul-server module is also deployed with this example.
 
 ## Deploy the infrastructure
 
@@ -55,9 +55,9 @@ Watch status of ping_service:   watch -x nomad status ping_service
 No running jobs
 [INFO] [run_tests.sh] Current state server
 Name                           Address        Port  Status  Leader  Protocol  Build  Datacenter  Region
-i-02c89e17768005473.us-east-1  172.31.67.3    4648  alive   false   2         0.7.1  leader      us-east-1
-i-0484b34c74263abcf.us-east-1  172.31.15.184  4648  alive   false   2         0.7.1  leader      us-east-1
-i-06b5b3f07b60b8745.us-east-1  172.31.49.121  4648  alive   true    2         0.7.1  leader      us-east-1
+i-02c89e17768005473.eu-west-1  172.31.67.3    4648  alive   false   2         0.7.1  leader      eu-west-1
+i-0484b34c74263abcf.eu-west-1  172.31.15.184  4648  alive   false   2         0.7.1  leader      eu-west-1
+i-06b5b3f07b60b8745.eu-west-1  172.31.49.121  4648  alive   true    2         0.7.1  leader      eu-west-1
 [INFO] [run_tests.sh] Current state nodes
 ```
 

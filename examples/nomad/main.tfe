@@ -1,5 +1,5 @@
 locals {
-  aws_region               = "us-east-1"
+  aws_region               = "eu-west-1"
   stack_name               = "COS"
   env_name                 = "playground"
   consul_ami_id            = "${var.ami_id}"

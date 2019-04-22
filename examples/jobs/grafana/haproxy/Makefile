@@ -1,6 +1,6 @@
 category    := service
 name        := grafanahaproxy
-aws_reg     := eu-central-1
+aws_reg     := eu-west-1
 aws_profile := playground
 
 docker_dir := .

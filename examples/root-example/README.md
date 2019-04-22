@@ -1,7 +1,7 @@
 # Overview
 
 Basic example for the module.
-Per default the module will be deployed in us-east-1 (virginia).
+Per default the module will be deployed in eu-west-1 (ireland).
 
 ## Deploy the infrastructure
 

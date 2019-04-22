@@ -15,7 +15,7 @@ job "cicd" {
     task "postgres" {
       driver = "docker"
       config {
-        image = "<aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/service/postgres:2018-03-24_09-37-08a9be79f_dirty"
+        image = "<aws_account_id>.dkr.ecr.eu-west-1.amazonaws.com/service/postgres:2018-03-24_09-37-08a9be79f_dirty"
 
         port_map = {
           http = 80
@@ -59,7 +59,7 @@ job "cicd" {
     task "concourse-serv" {
       driver = "docker"
       config {
-        image = "<aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/service/concourse:2018-03-24_10-21-36_a9be79f_dirty"
+        image = "<aws_account_id>.dkr.ecr.eu-west-1.amazonaws.com/service/concourse:2018-03-24_10-21-36_a9be79f_dirty"
 
         port_map = {
           http  = 8080
@@ -111,7 +111,7 @@ job "cicd" {
     task "concourse-work" {
       driver = "docker"
       config {
-        image = "<aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/service/concourse:2018-03-24_10-21-36_a9be79f_dirty"
+        image = "<aws_account_id>.dkr.ecr.eu-west-1.amazonaws.com/service/concourse:2018-03-24_10-21-36_a9be79f_dirty"
 
         # DISABLED port_map = {
         # DISABLED   http = 0

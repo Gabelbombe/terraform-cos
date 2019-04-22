@@ -1,7 +1,7 @@
 # Overview
 
 Basic example for the nomad-datacenter module.
-Per default the module will be deployed in us-east-1 (virginia) into three AZ's.
+Per default the module will be deployed in eu-west-1 (ireland) into three AZ's.
 
 ## Deploy the infrastructure
 

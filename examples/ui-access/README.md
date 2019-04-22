@@ -1,7 +1,7 @@
 # Overview
 
 Basic example for the ui-access module.
-Per default the module will be deployed in us-east-1 (virginia).
+Per default the module will be deployed in eu-west-1 (ireland).
 
 ## Deploy the infrastructure
 
@@ -20,7 +20,7 @@ terraform apply "ui.plan"
 
 This example has one curl example output for each of the ALB's to access the ui. To test you just have to call it.
 
-I.e. the output for nomad ui was ```curl_nomad_ui = curl http://alb-nomad-ui-example-1440612083.us-east-1.elb.amazonaws.com/ui/jobs```, then the call should return ```<h1>Nomad UI</h1>```.
+I.e. the output for nomad ui was ```curl_nomad_ui = curl http://alb-nomad-ui-example-1440612083.eu-west-1.elb.amazonaws.com/ui/jobs```, then the call should return ```<h1>Nomad UI</h1>```.
 
 ## Destroy the infrastructure
 
