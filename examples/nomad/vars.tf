@@ -4,5 +4,5 @@ variable "deploy_profile" {
 
 variable "ami_id" {
   description = "Id of the AMI for the nomad and consul nodes."
-  default     = "ami-a23feadf"
+  default     = "ami-02abc3480d8ecc9b7"
 }

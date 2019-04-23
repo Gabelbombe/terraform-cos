@@ -2,7 +2,7 @@ locals {
   aws_region = "eu-west-1"
   stack_name = "COS"
   env_name   = "playground"
-  ami_id     = "ami-08935252a36e25f85" # Amazon Linux AMI 2017.09.1 (HVM)
+  ami_id     = "ami-08935252a36e25f85" # Amazon Linux AMI 2018.03.0 (HVM)
 }
 
 provider "aws" {

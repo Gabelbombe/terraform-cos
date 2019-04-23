@@ -57,7 +57,7 @@ resource "aws_autoscaling_group" "asg_sample" {
 
 resource "aws_launch_configuration" "lc_sample" {
   name_prefix                 = "lc-sample-"
-  image_id                    = "ami-43a15f3e"                             # Ubuntu Server 16.04 LTS (HVM)
+  image_id                    = "mi-08660f1c6fb6b01e7"                     # Ubuntu Server 16.04 LTS (HVM)
   instance_type               = "t2.micro"
   user_data                   = "${data.template_file.user_data.rendered}"
   key_name                    = "cos-playground"

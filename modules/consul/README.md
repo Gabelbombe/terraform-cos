@@ -23,7 +23,7 @@ module "consul" {
   aws_region = "eu-west-1"
   vpc_id     = "${data.aws_vpc.default.id}"
   subnet_ids = "${data.aws_subnet_ids.all.ids}"
-  ami_id     = "ami-a23feadf"
+  ami_id     = "ami-02abc3480d8ecc9b7"
 }
 ```
 
