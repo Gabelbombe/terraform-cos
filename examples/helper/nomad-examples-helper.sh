@@ -10,7 +10,7 @@ set -e
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly SCRIPT_NAME="$(basename "$0")"
 
-readonly MAX_RETRIES=30
+readonly MAX_RETRIES=10
 readonly SLEEP_BETWEEN_RETRIES_SEC=10
 
 function log {
@@ -110,10 +110,10 @@ function wait_for_all_nomad_servers_to_register {
   log_info "Waiting for $expected_num_nomad_servers Nomad servers to register in the cluster"
 
   for (( i=1; i<="$MAX_RETRIES"; i++ )); do
-    log_info "Running 'nomad server-members' command against server behind dns $nomad_ui_alb_dns"
+    log_info "Running 'nomad server members' command against server behind dns $nomad_ui_alb_dns"
     # Intentionally use local and readonly here so that this script doesn't exit if the nomad server-members or grep
     # commands exit with an error.
-    local readonly members=$(nomad server-members -address="http://$nomad_ui_alb_dns")
+    local readonly members=$(nomad server members -address="http://$nomad_ui_alb_dns")
     local readonly alive_members=$(echo "$members" | grep "alive")
     local readonly num_nomad_servers=$(echo "$alive_members" | wc -l | tr -d ' ')
 
@@ -140,7 +140,7 @@ function get_nomad_server_ips {
 
   if [ -z "$1" ];then
     profile=""
-  fi 
+  fi
 
   aws_region=$(get_required_terraform_output "aws_region")
   cluster_tag_key=$(get_required_terraform_output "nomad_servers_cluster_tag_key")
@@ -189,7 +189,7 @@ function get_aws_profile() {
   # check cmd param, if set it will overwrite the env variable
   if [ ! -z "$1" ];then
     profile="$1"
-  fi 
+  fi
 
   echo "$profile"
 }
@@ -201,7 +201,7 @@ function run {
     echo -e "\tYou can specify it setting the env var AWS_PROFILE or"
     echo -e "\tby calling the script with the according parameter."
     exit 1
-  fi 
+  fi
 
   assert_is_installed "aws"
   assert_is_installed "jq"
