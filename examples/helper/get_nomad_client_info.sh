@@ -81,7 +81,7 @@ function get_nomad_client_info {
 
   if [ -z "$1" ];then
     profile=""
-  fi 
+  fi
 
   aws_region=$(get_required_terraform_output "aws_region")
   cluster_prefix=$(get_required_terraform_output "cluster_prefix")
@@ -106,13 +106,13 @@ function print_nomad_client_info_table {
   local readonly client_info_list_entries="${#client_info_list[@]}"
 
   local client_info_table=()
-  client_info_table+=("ISTANCE_ID\tINSTANCE_IP\t\tINSTANCE_IP (private)")
+  client_info_table+=("INSTANCE_ID\t\tINSTANCE_IP\tPRIVATE_IP")
   for (( i=0; i<"$client_info_list_entries"; i+=3 )); do
-    local client_id=${client_info_list[i]}
-    local client_ip=${client_info_list[i+1]}
+    local client_id=${client_info_list[i+1]}
+    local client_ip=${client_info_list[i]}
     local p_client_ip=${client_info_list[i+2]}
-    client_info_table+=("$client_id\t$client_ip\t$p_client_ip")
-  done 
+    client_info_table+=("$client_id\t$client_ip\t\t$p_client_ip")
+  done
 
   local readonly client_info_table_str=$(join "\n" "${client_info_table[@]}")
   echo -e "$client_info_table_str"
@@ -126,7 +126,7 @@ function get_aws_profile() {
   # check cmd param, if set it will overwrite the env variable
   if [ ! -z "$1" ];then
     profile="$1"
-  fi 
+  fi
 
   echo "$profile"
 }

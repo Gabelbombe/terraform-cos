@@ -76,7 +76,7 @@ function print_ui_alb_table {
   local readonly consul_ui_alb_dns=$(get_required_terraform_output "consul_ui_alb_dns")
 
   local ui_alb_table=()
-  ui_alb_table+=("UI\tALB-DNS\t\t\t\t\t\t\t\t\tLink")
+  ui_alb_table+=("UI\tALB-DNS\t\t\t\t\t\t\t\tLink")
   ui_alb_table+=("nomad\t${nomad_ui_alb_dns}\thttp://${nomad_ui_alb_dns}")
   ui_alb_table+=("consul\t${consul_ui_alb_dns}\thttp://${consul_ui_alb_dns}")
   ui_alb_table+=("fabio\t${fabio_ui_alb_dns}\thttp://${fabio_ui_alb_dns}")
