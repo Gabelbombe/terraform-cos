@@ -1,4 +1,3 @@
-/**
 # Basic Container Orchestration System
 
 Making use of Terraform and Nomad to setup a Container Orchestration System.
@@ -57,14 +56,14 @@ The [root-example](examples/root-example) builds up a full working `nomad-cluste
 
 Terraform modules for separate aspects of the Container Orchestration System.
 
-- [nomad](modules/nomad): Module that creates a Container of Nnomad masters.
-- [nomad-datacenter](modules/nomad-datacenter): Module that creates a Container of Nomad clients for a specific data-center.
-- [consul](modules/consul): Module building up a Consul Container.
-- [ui-access](modules/ui-access): Module building up alb's to grant access to Nomad, Consul and Fabio UI.
-- [sgrules](modules/sgrules): Module connecting security groups of instances apropriately to grant the minimal needed access.
-- [ami](modules/ami): Module for creating an AMI having Nomad, Consul and docker installed (based on Amazon Linux AMI 2018.03.0 (HVM)).
-- [ami2](modules/ami2): Module for creating an AMI having Nomad, Consul and docker installed (based on Amazon Linux AMI 2018.03.0 (HVM)).
-- [networking](modules/networking): **This module is only used to support the examples**. It is not part of the main Container Orchestration System module.
+* [nomad](modules/nomad): Module that creates a Container of Nnomad masters.
+* [nomad-datacenter](modules/nomad-datacenter): Module that creates a Container of Nomad clients for a specific data-center.
+* [consul](modules/consul): Module building up a Consul Container.
+* [ui-access](modules/ui-access): Module building up alb's to grant access to Nomad, Consul and Fabio UI.
+* [sgrules](modules/sgrules): Module connecting security groups of instances apropriately to grant the minimal needed access.
+* [ami](modules/ami): Module for creating an AMI having Nomad, Consul and docker installed (based on Amazon Linux AMI 2018.03.0 (HVM)).
+* [ami2](modules/ami2): Module for creating an AMI having Nomad, Consul and docker installed (based on Amazon Linux AMI 2018.03.0 (HVM)).
+* [networking](modules/networking): **This module is only used to support the examples**. It is not part of the main Container Orchestration System module.
 
 #### Module Dependencies
 
@@ -97,21 +96,7 @@ To overcome certificate verification issues you can also (not recommended) tempo
    And then call your CLI commands as usual.
    i.e. `nomad plan jobfile.nomad`
 
-## Documentation generation
-Documentation should be modified within `main.tf` and generated using [terraform-docs](https://github.com/segmentio/terraform-docs):
-```bash
-terraform-docs md ./ |sed '$d' >| README.md
-```
-## License
-GPL 3.0 Licensed. See [LICENSE](https://github.com/ehime/terraform-cos/tree/master/LICENSE) for full details.
-
 ## References
 
-- [Nomad Terraform Module](https://github.com/hashicorp/terraform-aws-nomad)
-- [Consul Terraform Module](https://github.com/hashicorp/terraform-aws-consul)
-
-*/
-
-provider "null" {}
-provider "template" {}
-provider "random" {}
+* [Nomad Terraform Module](https://github.com/hashicorp/terraform-aws-nomad)
+* [Consul Terraform Module](https://github.com/hashicorp/terraform-aws-consul)
