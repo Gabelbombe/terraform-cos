@@ -25,10 +25,13 @@ function log_info {
   log "INFO" "$message"
 }
 
-function configure_ecr_docker_credential_helper (){ 
+function configure_ecr_docker_credential_helper (){
   # These variables are passed in via Terraform template interplation
   log_info "Creating /etc/docker/config.json containing the credential helper for docker login to ECR"
   echo -e "echo -e '{\n\"credHelpers\": {\n\t\"${aws_account_id}.dkr.ecr.${aws_region}.amazonaws.com\": \"ecr-login\"\n\t}\n}' > /etc/docker/config.json" | sudo sh
+
+  # Docker dir might not exist
+  mkdir -p /home/ec2-user/.docker
 
   log_info "Copy /etc/docker/config.json to /home/ec2-user/.docker/config.json"
   cp /etc/docker/config.json /home/ec2-user/.docker/
@@ -37,7 +40,7 @@ function configure_ecr_docker_credential_helper (){
 }
 
 
-function setup_consul_and_nomad (){ 
+function setup_consul_and_nomad (){
   # These variables are passed in via Terraform template interplation
   log_info "Configuring consul."
   /opt/consul/bin/run-consul --client --cluster-tag-key "${cluster_tag_key}" --cluster-tag-value "${cluster_tag_value}"
