@@ -166,23 +166,23 @@ GPL 3.0 Licensed. See [LICENSE](https://github.com/ehime/terraform-cos/tree/mast
 
 | Name | Description |
 |------|-------------|
-| aws_region |  |
-| cluster_prefix |  |
-| consul_servers_cluster_tag_key |  |
-| consul_servers_cluster_tag_value |  |
-| consul_servers_sg_id |  |
-| consul_ui_alb_dns_name |  |
-| consul_ui_alb_zone_id |  |
-| dc-backoffice_sg_id |  |
-| dc-private-services_sg_id |  |
-| dc-public-services_sg_id |  |
-| fabio_ui_alb_dns_name |  |
-| fabio_ui_alb_zone_id |  |
-| nomad_clients_public_services_cluster_tag_value |  |
-| nomad_servers_cluster_tag_key |  |
-| nomad_servers_cluster_tag_value |  |
-| nomad_ui_alb_dns_name |  |
-| nomad_ui_alb_zone_id |  |
-| num_nomad_servers |  |
-| ssh_key_name |  |
-| vpc_id |  |
+| aws_region | The AWS region to deploy into |
+| cluster_prefix | Clustering prefix |
+| consul_servers_cluster_tag_key | Consul servers tag identifier |
+| consul_servers_cluster_tag_value | Consul servers tag identification value |
+| consul_servers_sg_id | Consuls security group id |
+| consul_ui_alb_dns_name | Consul UI cluster address |
+| consul_ui_alb_zone_id | Consuls zone identifier |
+| dc-backoffice_sg_id | Backoffice security group id |
+| dc-private-services_sg_id | Private services security group id |
+| dc-public-services_sg_id | Public services security group id |
+| fabio_ui_alb_dns_name | Fabio UI address |
+| fabio_ui_alb_zone_id | Fabios zone identifier |
+| nomad_clients_public_services_cluster_tag_value | Nomad clients identification tag value |
+| nomad_servers_cluster_tag_key | Nomad servers identifier tag |
+| nomad_servers_cluster_tag_value | Nomad servers identifcation tag value |
+| nomad_ui_alb_dns_name | Nomad UI cluster address |
+| nomad_ui_alb_zone_id | Nomads zone identifier |
+| num_nomad_servers | Amount of Nomad servers to deploy |
+| ssh_key_name | SSH key in implementation |
+| vpc_id | VPC identifier |
