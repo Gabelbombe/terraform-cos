@@ -1,4 +1,4 @@
-## ALB -> ALB-Listener (port 80) -forwards to -> target-group (on port 4646) which is attached to the 
+## ALB -> ALB-Listener (port 80) -forwards to -> target-group (on port 4646) which is attached to the
 ## AutoScalingGroup that maintains the fabio-servers.
 resource "aws_alb" "alb_fabio_ui" {
   name            = "${var.stack_name}-fabio-ui${var.unique_postfix}"

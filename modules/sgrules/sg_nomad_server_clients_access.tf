@@ -1,4 +1,4 @@
-# Security Group rules for nomad-server that grants access from nomad-clients to nomad-server 
+# Security Group rules for nomad-server that grants access from nomad-clients to nomad-server
 
 # rule that grants TCP ingress access from public-services data-center to nomad-server to on ports
 # 4646 ... http api

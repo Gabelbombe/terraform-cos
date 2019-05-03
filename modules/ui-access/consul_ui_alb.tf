@@ -1,4 +1,4 @@
-## ALB -> ALB-Listener (port 80) -forwards to -> target-group (on port 8500) which is attached to the 
+## ALB -> ALB-Listener (port 80) -forwards to -> target-group (on port 8500) which is attached to the
 ## AutoScalingGroup that maintains the consul-servers.
 resource "aws_alb" "alb_consul_ui" {
   name            = "${var.stack_name}-consul-ui${var.unique_postfix}"

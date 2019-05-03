@@ -1,6 +1,6 @@
 # Sgrules Module
 
-In this module the security groups of nomdad-clients, -server and consul-nodes are connected apropriately to ensure that the minimal needed access between the instances is ensured.
+In this module the security groups of nomad-clients, -server and consul-nodes are connected apropriately to ensure that the minimal needed access between the instances is ensured.
 
 ## Overview
 

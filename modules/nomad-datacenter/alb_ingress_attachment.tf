@@ -1,4 +1,4 @@
-## ALB (given by arn) -> ALB-Listener (var.ingress_controller_port) -forwards to -> target-group (on port 9999) which is attached to the 
+## ALB (given by arn) -> ALB-Listener (var.ingress_controller_port) -forwards to -> target-group (on port 9999) which is attached to the
 ## AutoScalingGroup that maintains the nomad clients having the ingress-controller (i.e. fabio) "public-services".
 
 # Git: Since version 0.3.0 of the nomad terraform module attachments have to be used.

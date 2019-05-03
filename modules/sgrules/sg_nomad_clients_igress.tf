@@ -24,7 +24,6 @@ resource "aws_security_group_rule" "sgr_private_services_ig_999x" {
   security_group_id = "${var.sg_id_private_services_dc}"
 }
 
-
 # rule granting access on igress-ports to content-connector data-center on ports
 # 9998 ... 9999
 resource "aws_security_group_rule" "sgr_content_connector_ig_999x" {
@@ -36,7 +35,6 @@ resource "aws_security_group_rule" "sgr_content_connector_ig_999x" {
   cidr_blocks       = ["0.0.0.0/0"]
   security_group_id = "${var.sg_id_content_connector_dc}"
 }
-
 
 # rule granting access on igress-ports to backoffice services data-center on ports
 # 9998 ... 9999
