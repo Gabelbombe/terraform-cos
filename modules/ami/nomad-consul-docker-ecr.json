@@ -10,7 +10,7 @@
     {
       "ami_name": "nomad-consul-docker-ecr-amazon-linux-{{isotime | clean_ami_name}}",
       "ami_description": "An Amazon Linux AMI that has Nomad, Consul and Docker installed and is prepared for ECR usage.",
-      "instance_type": "t2.micro",
+      "instance_type": "t3.medium",
       "name": "amazon-linux-ami",
       "region": "{{user `aws_region`}}",
       "type": "amazon-ebs",

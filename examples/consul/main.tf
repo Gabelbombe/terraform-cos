@@ -34,6 +34,6 @@ module "consul" {
   cluster_tag_value       = "${local.stack_name}-${local.env_name}-consul-srv"
   allowed_ssh_cidr_blocks = ["0.0.0.0/0"]
   ssh_key_name            = "cos-playground"
-  instance_type           = "t2.micro"
+  instance_type           = "t3.medium"
   num_servers             = "3"
 }

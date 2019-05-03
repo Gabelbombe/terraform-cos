@@ -42,7 +42,7 @@ variable "stack_name" {
 
 variable "instance_type" {
   description = "The instance type for all nomad server nodes."
-  default     = "t2.micro"
+  default     = "t3.medium"
 }
 
 variable "ssh_key_name" {

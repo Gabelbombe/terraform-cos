@@ -33,7 +33,7 @@ variable "stack_name" {
 
 variable "instance_type" {
   description = "The instance type for all consul server nodes."
-  default     = "t2.micro"
+  default     = "t3.medium"
 }
 
 variable "unique_postfix" {

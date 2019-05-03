@@ -51,7 +51,7 @@ variable "num_servers" {
 
 variable "instance_type" {
   description = "The instance type for all consul server nodes."
-  default     = "t2.micro"
+  default     = "t3.medium"
 }
 
 variable "ssh_key_name" {

@@ -78,7 +78,7 @@ variable "unique_postfix" {
 
 variable "instance_type_server" {
   description = "The instance type for all nomad and consul server nodes."
-  default     = "t2.micro"
+  default     = "t3.medium"
 }
 
 variable "stack_name" {
@@ -141,7 +141,7 @@ variable "nomad_private_services_dc_node_cfg" {
     "min"              = 1
     "max"              = 1
     "desired_capacity" = 1
-    "instance_type"    = "t2.micro"
+    "instance_type"    = "t3.medium"
   }
 }
 
@@ -196,7 +196,7 @@ variable "nomad_public_services_dc_node_cfg" {
     "min"              = 1
     "max"              = 1
     "desired_capacity" = 1
-    "instance_type"    = "t2.micro"
+    "instance_type"    = "t3.medium"
   }
 }
 
@@ -251,7 +251,7 @@ variable "nomad_backoffice_dc_node_cfg" {
     "min"              = 1
     "max"              = 1
     "desired_capacity" = 1
-    "instance_type"    = "t2.micro"
+    "instance_type"    = "t3.medium"
   }
 }
 
@@ -306,7 +306,7 @@ variable "nomad_content_connector_dc_node_cfg" {
     "min"              = 1
     "max"              = 1
     "desired_capacity" = 1
-    "instance_type"    = "t2.micro"
+    "instance_type"    = "t3.medium"
   }
 }
 
@@ -371,7 +371,7 @@ variable "consul_num_servers" {
 
 variable "consul_instance_type" {
   description = "The instance type for all consul server nodes."
-  default     = "t2.micro"
+  default     = "t3.medium"
 }
 
 variable "ecr_repositories" {

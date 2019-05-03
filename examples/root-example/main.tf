@@ -40,7 +40,7 @@ module "bastion" {
   env_name                = "${var.env_name}"
   stack_name              = "${var.stack_name}"
   allowed_ssh_cidr_blocks = "${local.allowed_cidr_blocks}"
-  instance_type           = "t2.micro"
+  instance_type           = "t3.medium"
   unique_postfix          = "-${random_pet.unicorn.id}"
 }
 
@@ -76,7 +76,7 @@ module "nomad-infra" {
   stack_name              = "${var.stack_name}"
   env_name                = "${var.env_name}"
   unique_postfix          = "-${random_pet.unicorn.id}"
-  instance_type_server    = "t2.micro"
+  instance_type_server    = "t3.medium"
   ssh_key_name            = "${var.ssh_key_name}"
   allowed_ssh_cidr_blocks = ["${values(local.allowed_cidr_blocks)}"]
 
@@ -86,7 +86,7 @@ module "nomad-infra" {
   # for the ui-albs (nomad-ui, consul-ui and fabio-ui).
   # Keep in mind that you have to configure the nomad CLI to skip certificate verification in this case
   # because the sample certificate that is used here is just a self signed one which even does not fit the
-  # domain by the nomad alb. Short said it is invalid and only in place for testing/ demonstration purposes.
+  # domain by the nomad alb. In short, it is invalid and only in place for testing/demonstration purposes.
   #ui_alb_https_listener_cert_arn = "${aws_iam_server_certificate.certificate_alb.arn}"
   #ui_alb_use_https_listener      = true
 
@@ -110,5 +110,5 @@ module "nomad-infra" {
   additional_instance_tags_content_connector_dc   = "${var.additional_instance_tags_sample}"
   # [Consul] Optional variables
   consul_num_servers   = 3
-  consul_instance_type = "t2.micro"
+  consul_instance_type = "t3.medium"
 }

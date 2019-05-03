@@ -12,7 +12,7 @@
     {
       "ami_name": "nomad-consul-docker-amazon-linux2-{{isotime | clean_ami_name}}",
       "ami_description": "An Amazon Linux 2 AMI that has Nomad ({{user `nomad_version`}}), Consul ({{user `consul_version`}}) and Docker installed.",
-      "instance_type": "t2.micro",
+      "instance_type": "t3.medium",
       "name": "amazon-linux-ami2",
       "region": "{{user `aws_region`}}",
       "ami_regions": "{{user `ami_regions`}}",

@@ -47,7 +47,7 @@ module "nomad-datacenter" {
   allowed_ssh_cidr_blocks = ["0.0.0.0/0"]
   ssh_key_name            = "cos-playground"
   datacenter_name         = "public-services"
-  instance_type           = "t2.micro"
+  instance_type           = "t3.medium"
   unique_postfix          = "-${random_pet.unicorn.id}"
   ingress_controller_port = 9999
 

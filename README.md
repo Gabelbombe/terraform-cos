@@ -127,7 +127,7 @@ GPL 3.0 Licensed. See [LICENSE](https://github.com/ehime/terraform-cos/tree/mast
 | attach_backoffice_alb_listener | Set this to true in case an alb shall be attached to the backoffice data-center. In this case the variable alb_backoffice_https_listener_arn has to be set specifying the correct alb listener. | string | `false` | no |
 | aws_region | region this stack should be applied to | string | - | yes |
 | consul_ami_id | The ID of the AMI to be used for the consul nodes. | string | - | yes |
-| consul_instance_type | The instance type for all consul server nodes. | string | `t2.micro` | no |
+| consul_instance_type | The instance type for all consul server nodes. | string | `t3.medium` | no |
 | consul_num_servers | The number of Consul server nodes to deploy. We strongly recommend using 3 or 5. | string | `3` | no |
 | consul_server_subnet_ids | Ids of the subnets to deploy the consul servers into. | list | - | yes |
 | device_to_mount_target_map_backoffice_dc | List of device to mount target entries. | list | `<list>` | no |
@@ -141,7 +141,7 @@ GPL 3.0 Licensed. See [LICENSE](https://github.com/ehime/terraform-cos/tree/mast
 | ecr_repositories | List of names for the ECR repositories to be created. Nomad will use them to get docker images from it in the job files. | list | `<list>` | no |
 | efs_dns_name | DNS name of the efs this nodes should have access to. | string | `` | no |
 | env_name | Name of the environment (i.e. prod). | string | `playground` | no |
-| instance_type_server | The instance type for all nomad and consul server nodes. | string | `t2.micro` | no |
+| instance_type_server | The instance type for all nomad and consul server nodes. | string | `t3.medium` | no |
 | map_bucket_name | name of the s3 bucket carrying the maps. | string | `` | no |
 | nomad_ami_id_clients | The ID of the AMI to be used for the nomad clientnodes. | string | - | yes |
 | nomad_ami_id_servers | The ID of the AMI to be used for the nomad server nodes. | string | - | yes |

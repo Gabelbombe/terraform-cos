@@ -5,12 +5,12 @@ variable "deploy_profile" {
 
 variable "nomad_ami_id_servers" {
   description = "AMI ID for nomad server"
-  default     = "mi-02abc3480d8ecc9b7"
+  default     = "ami-02abc3480d8ecc9b7"
 }
 
 variable "nomad_ami_id_clients" {
   description = "AMI ID for nomad nodes"
-  default     = "mi-02abc3480d8ecc9b7"
+  default     = "ami-02abc3480d8ecc9b7"
 }
 
 variable "env_name" {
@@ -52,7 +52,7 @@ variable "nomad_dc_node_cfg" {
     "min"              = 1
     "max"              = 1
     "desired_capacity" = 1
-    "instance_type"    = "t2.micro"
+    "instance_type"    = "t3.medium"
   }
 }
 

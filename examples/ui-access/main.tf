@@ -58,7 +58,7 @@ resource "aws_autoscaling_group" "asg_sample" {
 resource "aws_launch_configuration" "lc_sample" {
   name_prefix                 = "lc-sample-"
   image_id                    = "ami-08660f1c6fb6b01e7"                    # Ubuntu Server 16.04 LTS (HVM)
-  instance_type               = "t2.micro"
+  instance_type               = "t3.medium"
   user_data                   = "${data.template_file.user_data.rendered}"
   key_name                    = "cos-playground"
   associate_public_ip_address = true

@@ -62,7 +62,7 @@ module "nomad" {
   stack_name              = "${local.stack_name}"
   allowed_ssh_cidr_blocks = ["0.0.0.0/0"]
   ssh_key_name            = "cos-playground"
-  instance_type           = "t2.micro"
+  instance_type           = "t3.medium"
   unique_postfix          = "-${random_pet.unicorn.id}"
   datacenter_name         = "leader"
 

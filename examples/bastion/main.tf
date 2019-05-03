@@ -42,6 +42,6 @@ module "bastion" {
     "all" = "0.0.0.0/0"
   }
 
-  instance_type  = "t2.micro"
+  instance_type  = "t3.medium"
   unique_postfix = "-${random_pet.unicorn.id}"
 }
