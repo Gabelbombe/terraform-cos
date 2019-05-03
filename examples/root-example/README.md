@@ -7,13 +7,13 @@ Per default the module will be deployed in eu-west-1 (ireland).
 
 ```bash
 # terraform init &&\
-# terraform plan -out cos.plan -var deploy_profile=<your-profile> &&\
-# terraform apply "cos.plan"
+# terraform plan -out container-system.plan -var deploy_profile=<your-profile> &&\
+# terraform apply "container-system.plan"
 
 # on playground
 terraform init &&\
-terraform plan -out cos.plan -var deploy_profile=playground &&\
-terraform apply "cos.plan"
+terraform plan -out container-system.plan -var deploy_profile=playground &&\
+terraform apply "container-system.plan"
 ```
 
 Now you can either configure your shell using the bootstrap.sh script by calling:
@@ -135,7 +135,7 @@ sshuttle_login.sh
 
 ### Network Setup
 
-![Nomad architecture root-example](https://raw.githubusercontent.com/MatthiasScholz/cos/master/_docs/architecture-root-example.png)
+![Nomad architecture root-example](https://raw.githubusercontent.com/niigataken/terraform-cos/master/_docs/architecture-root-example.png)
 
 ### Datacenter Configuration
 

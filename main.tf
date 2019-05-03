@@ -103,7 +103,7 @@ Documentation should be modified within `main.tf` and generated using [terraform
 terraform-docs md ./ |sed '$d' >| README.md
 ```
 ## License
-GPL 3.0 Licensed. See [LICENSE](https://github.com/ehime/terraform-cos/tree/master/LICENSE) for full details.
+GPL 3.0 Licensed. See [LICENSE](https://github.com/niigataken/terraform-cos/tree/master/LICENSE) for full details.
 
 ## References
 
