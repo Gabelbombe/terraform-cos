@@ -6,14 +6,14 @@ Per default the module will be deployed in eu-west-1 (ireland).
 ## Deploy the infrastructure
 
 ```bash
-# terraform init &&\
-# terraform plan -out container-system.plan -var deploy_profile=<your-profile> &&\
-# terraform apply "container-system.plan"
+# terraform init
+# terraform plan -out container-system.plan -var deploy_profile=<your-profile>
+# terraform apply container-system.plan
 
 # on playground
-terraform init &&\
-terraform plan -out container-system.plan -var deploy_profile=playground &&\
-terraform apply "container-system.plan"
+terraform init
+terraform plan -out container-system.plan -var deploy_profile=playground
+terraform apply container-system.plan
 ```
 
 Now you can either configure your shell using the bootstrap.sh script by calling:
@@ -28,8 +28,8 @@ Or you follow the preceding instructions.
 ## Setup helper scripts
 
 ```bash
-script_dir=$(pwd)/../helper && export PATH=$PATH:$script_dir &&\
-export AWS_PROFILE=playground
+script_dir=$(pwd)/../helper && export PATH=$PATH:$script_dir \
+&& export AWS_PROFILE=playground
 ```
 
 ## Nomad
@@ -38,8 +38,7 @@ export AWS_PROFILE=playground
 
 ```bash
 # Set the NOMAD_ADDR env variable
-nomad_dns=$(terraform output nomad_ui_alb_dns) &&\
-export NOMAD_ADDR=http://$nomad_dns &&\
+export NOMAD_ADDR=http://$(terraform output nomad_ui_alb_dns)
 echo ${NOMAD_ADDR}
 ```
 
@@ -47,8 +46,8 @@ echo ${NOMAD_ADDR}
 
 ```bash
 # wait for servers and clients
-wait_for_servers.sh &&\
-wait_for_clients.sh
+wait_for_servers.sh  \
+&& wait_for_clients.sh
 ```
 
 ### (Optional) Show some commands
@@ -63,8 +62,7 @@ nomad-examples-helper.sh
 
 ```bash
 # Set the CONSUL_HTTP_ADDR env variable
-consul_dns=$(terraform output consul_ui_alb_dns) &&\
-export CONSUL_HTTP_ADDR=http://$consul_dns &&\
+export CONSUL_HTTP_ADDR=http://$(terraform output consul_ui_alb_dns)
 echo ${CONSUL_HTTP_ADDR}
 ```
 
@@ -100,8 +98,8 @@ nomad run $job_dir/ping_service.nomad
 ## Open UI's
 
 ```bash
-xdg-open $(get_ui_albs.sh | awk '/consul/ {print $3}') &&\
-xdg-open $(get_ui_albs.sh | awk '/nomad/ {print $3}') &&\
+xdg-open $(get_ui_albs.sh | awk '/consul/ {print $3}') && \
+xdg-open $(get_ui_albs.sh | awk '/nomad/ {print $3}')  && \
 xdg-open $(get_ui_albs.sh | awk '/fabio/ {print $3}')
 ```
 
@@ -109,7 +107,7 @@ xdg-open $(get_ui_albs.sh | awk '/fabio/ {print $3}')
 
 ```bash
 # call the service over loadbalancer
-ingress_alb_dns=$(terraform output ingress_alb_dns) &&\
+ingress_alb_dns=$(terraform output ingress_alb_dns)
 watch -x curl -s http://$ingress_alb_dns/ping
 ```
 
@@ -139,4 +137,4 @@ sshuttle_login.sh
 
 ### Datacenter Configuration
 
-* [ ] TODO: Describe to configuration of the different nomad datacenters.
+* [ ] TODO: Describe the configuration of the different Nomad datacenters.

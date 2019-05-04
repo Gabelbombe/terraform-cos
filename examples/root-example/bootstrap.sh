@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-SCRIPT=`basename "$0"`
+SCRIPT=$(basename "$0")
 
 echo "[INFO] [${SCRIPT}] Add helper scripts to PATH and set playground as AWS_PROFILE"
 script_dir=$(pwd)/../helper
