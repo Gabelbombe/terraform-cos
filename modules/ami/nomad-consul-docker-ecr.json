@@ -85,8 +85,8 @@
     {
       "type": "shell",
       "inline": [
-          "sudo cp $HOME/.docker/config.json /etc/docker/config.json",
-          "sudo chmod a+rwX /etc/docker/"
+        "sudo cp $HOME/.docker/config.json /etc/docker/config.json",
+        "sudo chmod a+rwX /etc/docker/"
       ]
     },
     {
@@ -96,10 +96,11 @@
     {
       "type": "shell",
       "inline": [
-          "cp /etc/sysctl.conf /tmp/sysctl.conf",
-          "echo 'vm.max_map_count=262144' >> /tmp/sysctl.conf",
-          "sudo cp /tmp/sysctl.conf /etc/sysctl.conf"
-    ]
+        "cp /etc/sysctl.conf /tmp/sysctl.conf",
+        "echo 'vm.max_map_count=262144' >> /tmp/sysctl.conf",
+        "sudo cp /tmp/sysctl.conf /etc/sysctl.conf"
+      ]
+    },
     {
       "type": "shell",
       "inline": [
